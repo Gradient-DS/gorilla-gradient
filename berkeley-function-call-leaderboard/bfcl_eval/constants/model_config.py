@@ -112,6 +112,30 @@ class ModelConfig:
 
 # Inference through API calls
 api_inference_model_map = {
+    "meta-llama/Llama-3.3-70B-Instruct": ModelConfig( #! Gradient: custom model added
+        model_name="meta-llama/Llama-3.3-70B-Instruct",
+        display_name="meta-llama/Llama-3.3-70B-Instruct",
+        url="https://router.huggingface.co/v1",
+        org="Meta",
+        license="Meta Llama 3 Community",
+        model_handler=OpenAIResponsesHandler,
+        input_price=None,
+        output_price=None,
+        is_fc_model=True,
+        underscore_to_dot=False,
+    ),
+    "openai/gpt-oss-120b:cerebras": ModelConfig( #! Gradient: custom model added
+        model_name="openai/gpt-oss-120b:cerebras",
+        display_name="openai/gpt-oss-120b:cerebras",
+        url="https://router.huggingface.co/v1",
+        org="OpenAI",
+        license="Apache 2.0",
+        model_handler=OpenAIResponsesHandler,
+        input_price=None,
+        output_price=None,
+        is_fc_model=True,
+        underscore_to_dot=False,
+    ),
     "gorilla-openfunctions-v2": ModelConfig(
         model_name="gorilla-openfunctions-v2",
         display_name="Gorilla-OpenFunctions-v2 (FC)",

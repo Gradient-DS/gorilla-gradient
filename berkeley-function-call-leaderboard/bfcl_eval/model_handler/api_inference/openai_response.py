@@ -22,7 +22,8 @@ class OpenAIResponsesHandler(BaseHandler):
     def __init__(self, model_name, temperature) -> None:
         super().__init__(model_name, temperature)
         self.model_style = ModelStyle.OPENAI_RESPONSES
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("BASE_URL")) #! Gradient: Modified line
 
     @staticmethod
     def _substitute_prompt_role(prompts: list[dict]) -> list[dict]:
