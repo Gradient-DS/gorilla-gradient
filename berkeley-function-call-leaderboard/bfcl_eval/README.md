@@ -15,7 +15,7 @@ To benchmark models, follow the steps below:
 `$ cd berkeley-function-call-leaderboard`
 
 2. Install dependencies
-`$ pip install -e.`
+`$ pip install -e .`
 
 3. Go into bfcl_eval directory:
 `$ cd bfcl_eval`
