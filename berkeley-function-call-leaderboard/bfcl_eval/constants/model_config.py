@@ -111,13 +111,11 @@ class ModelConfig:
 
 
 # Inference through API calls
-# https://api.intermax.ubiops.com/v2.1/projects/gradient-ds-proxy/deployments/ --> llama-3-3/requests
-# https://api.ubiops.com/v2.1/projects/gen-ai/openai-compatible/ --> v1
 api_inference_model_map = {
-    "ubiops/llama-3-3": ModelConfig( #! Gradient: custom model added
-        model_name="llama-3-3/requests",
-        display_name="ubiops/llama-3-3",
-        url="https://api.intermax.ubiops.com/v2.1/projects/gradient-ds-proxy/deployments",
+    "ubiops-deployment/llama-3-3//llama-3-3": ModelConfig( #! Gradient: custom model added
+        model_name="ubiops-deployment/llama-3-3//llama-3-3",
+        display_name="ubiops-deployment/llama-3-3//llama-3-3",
+        url="https://api.intermax.ubiops.com/v2.1/projects/gradient-ds-proxy/deployments/llama-3-3/requests",
         org="Meta",
         license="Meta Llama 3 Community",
         model_handler=OpenAIResponsesHandler,
@@ -126,10 +124,10 @@ api_inference_model_map = {
         is_fc_model=True,
         underscore_to_dot=False,
     ),
-    "ubiops/gpt-oss": ModelConfig( #! Gradient: custom model added
-        model_name="v1",
-        display_name="ubiops/gpt-oss",
-        url="https://api.ubiops.com/v2.1/projects/gen-ai/openai-compatible",
+    "ubiops-deployment/gpt-oss//openai/gpt-oss-120b": ModelConfig( #! Gradient: custom model added
+        model_name="ubiops-deployment/gpt-oss//openai/gpt-oss-120b",
+        display_name="ubiops-deployment/gpt-oss//openai/gpt-oss-120b",
+        url="https://api.ubiops.com/v2.1/projects/gen-ai/openai-compatible/v1",
         org="OpenAI",
         license="Apache 2.0",
         model_handler=OpenAIResponsesHandler,
