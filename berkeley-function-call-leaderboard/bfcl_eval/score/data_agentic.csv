@@ -1,0 +1,6 @@
+Rank,Model,Agentic Overall Acc,Web Search Summary,Web Search Base,Web Search No Snippet,Memory Summary,Memory KV,Memory Vector,Memory Recursive Summarization
+1,ubiops-deployment/llama-3-3//llama-3-3,0.00%,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+2,ubiops-deployment/gpt-oss//openai/gpt-oss-120b,0.00%,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+3,ubiops-deployment/gpt-oss//openai/gpt-oss-120b,0.00%,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+4,openai/gpt-oss-120b:cerebras,0.00%,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+5,meta-llama/Llama-3.3-70B-Instruct,0.00%,N/A,N/A,N/A,N/A,N/A,N/A,N/A

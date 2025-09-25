@@ -112,16 +112,28 @@ class ModelConfig:
 
 # Inference through API calls
 api_inference_model_map = {
-    "ubiops-deployment/llama-3-3//llama-3-3": ModelConfig( #! Gradient: custom model added
-        model_name="ubiops-deployment/llama-3-3//llama-3-3",
-        display_name="ubiops-deployment/llama-3-3//llama-3-3",
-        url="https://api.intermax.ubiops.com/v2.1/projects/gradient-ds-proxy/deployments/llama-3-3/requests",
-        org="Meta",
-        license="Meta Llama 3 Community",
-        model_handler=OpenAIResponsesHandler,
+    "ubiops-deployment/gpt-oss//openai/gpt-oss-120b-FC": ModelConfig( #! Gradient: custom model added
+        model_name="ubiops-deployment/gpt-oss//openai/gpt-oss-120b",
+        display_name="ubiops-deployment/gpt-oss//openai/gpt-oss-120b",
+        url="https://api.ubiops.com/v2.1/projects/gen-ai/openai-compatible/v1",
+        org="OpenAI",
+        license="Apache 2.0",
+        model_handler=OpenAICompletionsHandler,
         input_price=None,
         output_price=None,
         is_fc_model=True,
+        underscore_to_dot=False,
+    ),
+    "ubiops-deployment/llama-3-3//llama-3-3": ModelConfig( #! Gradient: custom model added
+        model_name="ubiops-deployment/llama-3-3//llama-3-3",
+        display_name="ubiops-deployment/llama-3-3//llama-3-3",
+        url="https://api.intermax.ubiops.com/v2.1/projects/gradient-ds-proxy/openai-compatible/v1",
+        org="Meta",
+        license="Meta Llama 3 Community",
+        model_handler=OpenAICompletionsHandler,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
         underscore_to_dot=False,
     ),
     "ubiops-deployment/gpt-oss//openai/gpt-oss-120b": ModelConfig( #! Gradient: custom model added
@@ -130,10 +142,10 @@ api_inference_model_map = {
         url="https://api.ubiops.com/v2.1/projects/gen-ai/openai-compatible/v1",
         org="OpenAI",
         license="Apache 2.0",
-        model_handler=OpenAIResponsesHandler,
+        model_handler=OpenAICompletionsHandler,
         input_price=None,
         output_price=None,
-        is_fc_model=True,
+        is_fc_model=False,
         underscore_to_dot=False,
     ),
     "meta-llama/Llama-3.3-70B-Instruct": ModelConfig( #! Gradient: custom model added
